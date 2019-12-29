@@ -12,6 +12,7 @@ Its primary goals are to provide self-service data profiling to understand the d
 ## Install
 ```
 pip install sakdas
+install sakdas --upgrade
 ```
 ## Example
 ```ruby
