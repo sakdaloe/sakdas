@@ -31,9 +31,7 @@ auditConfig = {'audit':{
     'audit_data_pattern':[
                 {'column_name':'service_description', 'regex_pattern': '(.*)'}
             ],
-    'audit_outlier': False,
-    'audit_primary_key': True
-    }
+    'audit_outlier': False
 } 
 
 dataset.audit(auditConfig)
