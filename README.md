@@ -1,5 +1,5 @@
 # Acknowledgment
-This package is part of the Master of Science Program in Applied Statistics (Business Analytics and Intelligence: BA&I), National Institute of Development Administration(NIDA), Thailand
+This package is a part of the Master of Science Program in Applied Statistics (Business Analytics and Intelligence: BA&I), National Institute of Development Administration(NIDA), Thailand
 
 ## Beta Version !!!
 Sakdas is a data profiling and auditing package based on statistical methods.
