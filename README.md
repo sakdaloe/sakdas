@@ -9,12 +9,11 @@ Its primary goals are to provide self-service data profiling to understand the d
 3. Provide audited dataset(CSV) with auditing result tag or without tag, duplicated dataset.
 4. Generate data profiling and auditing reports.
 
-## Package Install
+## Installation
 ```
 pip install sakdas
-install sakdas --upgrade
 ```
-## Package Update
+## Upgrade
 ```
 install sakdas --upgrade
 ```
