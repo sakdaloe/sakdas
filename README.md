@@ -13,6 +13,8 @@ Its primary goals are to provide self-service data profiling to understand the d
 
 ## Installation
 ```
+pip install pandas
+pip install matplotlib
 pip install sakdas
 ```
 ## Upgrade
@@ -404,23 +406,26 @@ print(dataset.auditedDataset)
 
 ## Auditing Example
 ```ruby
-from sakdas import Dataset
+from sakdas import Sakda as sd
+import pandas as pd
 
-dataset = Dataset("/<your data path>/restaurant-and-market-health-inspections.csv")
+df = pd.read_csv("/Users/sakdaloetpipatwanich/Downloads/supermarket_sales.csv")
 
-auditConfig = {'audit':{
-    'audit_duplication': True,
-    'audit_missing_value': True,
+auditing_config = {'audit':{
+    'audit_missing_value': False,
     'define_custom_missing_value': ['.','999'],
-    'audit_data_range':[
-                {'column_name':'program_element_pe', 'min': 1700, 'max': 1900}
-                
-            ],
     'audit_data_pattern':[
-                {'column_name':'service_description', 'regex_pattern': '(.*)'}
+                {'column_name':'Gender', 'regex_pattern': '(Female|Male)'},
+                {'column_name':'Invoice_ID', 'regex_pattern': '(^[0-9]{3}-[0-9]{2}-[0-9]{4})'}
             ],
-    'audit_outlier': False
-} 
+    'audit_outlier': False,
+    'audit_primary_key': False,
+    'audit_data_range' : [{'column_name':'Quantity', 'min': 0, 'max': 100}]
+    }
+}
+sample_supermarket_sales = sd(
+    df,'sample_supermarket_sales',
+    '/Users/sakdaloetpipatwanich/Documents/Sakdas_Result/', 
+    auditing_config = auditing_config)
 
-dataset.audit(auditConfig)
 ```
