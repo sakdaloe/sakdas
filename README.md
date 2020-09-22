@@ -409,7 +409,7 @@ print(dataset.auditedDataset)
 from sakdas import Sakda as sd
 import pandas as pd
 
-df = pd.read_csv("/Users/sakdaloetpipatwanich/Downloads/supermarket_sales.csv")
+df = pd.read_csv("<Path-to-File>/supermarket_sales.csv")
 
 auditing_config = {'audit':{
     'audit_missing_value': False,
@@ -424,8 +424,7 @@ auditing_config = {'audit':{
     }
 }
 sample_supermarket_sales = sd(
-    df,'sample_supermarket_sales',
-    '/Users/sakdaloetpipatwanich/Documents/Sakdas_Result/', 
+    df,'sample_supermarket_sales',<Path-to-Result>', 
     auditing_config = auditing_config)
 
 ```
